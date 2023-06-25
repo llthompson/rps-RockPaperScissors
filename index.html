@@ -14,25 +14,31 @@
 </head>
 
 <body>
-  <h1>Rock Paper Scissors</h1>
+  <h1>Rock, Paper, Scissors!</h1>
 
+<main>
   <div id="game-container">
     <div id="input-container">
       <label for="hand1">Player 1:</label>
-      <input type="text" id="hand1" placeholder="Enter your hand">
+      <input type="text" id="hand1" placeholder="Hand One">
       <br>
       <label for="hand2">Player 2:</label>
-      <input type="text" id="hand2" placeholder="Enter your hand">
+      <input type="text" id="hand2" placeholder="Hand Two">
       <br>
-      <button id="play-button">Play</button>
+     
+    </div>
+    <div id="button-container">
+      <button id="play-button">Play!</button>
+      <button onclick="resetGame()">Again!</button>
     </div>
 
     <div id="result-container">
       <h2 id="result"></h2>
     </div>
   </div>
+</main>
 
-  <script src="main.js"></script>
+  <script src="game.js"></script>
 </body>
 
 </html>
