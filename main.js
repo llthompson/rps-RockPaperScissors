@@ -13,11 +13,28 @@ const rl = readline.createInterface({
 
 // the function that will be called by the unit test below
 const rockPaperScissors = (hand1, hand2) => {
+  const validHands = ['rock', 'paper', 'scissors'];
+  hand1 = hand1.toLowerCase().trim();
+  hand2 = hand2.toLowerCase().trim();
 
-  // Write code here
-  // Use the unit test to see what is expected
+  if (!validHands.includes(hand1) || !validHands.includes(hand2)) {
+    return 'Oops, not a valid hand! Please choose either rock, paper, or scissors. Duh.';
+  }
+
+  if (hand1 === hand2) {
+    return "It's a tie!";
+  } else if (
+    (hand1 === 'rock' && hand2 === 'scissors') ||
+    (hand1 === 'paper' && hand2 === 'rock') ||
+    (hand1 === 'scissors' && hand2 === 'paper')
+  ) {
+    return 'Hand one wins!';
+  } else {
+    return 'Hand two wins!';
+  }
 
 }
+
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
@@ -25,7 +42,7 @@ const rockPaperScissors = (hand1, hand2) => {
 function getPrompt() {
   rl.question('hand1: ', (answer1) => {
     rl.question('hand2: ', (answer2) => {
-      console.log( rockPaperScissors(answer1, answer2) );
+      console.log(rockPaperScissors(answer1, answer2));
       getPrompt();
     });
   });
@@ -48,7 +65,7 @@ if (typeof describe === 'function') {
       assert.equal(rockPaperScissors('paper', 'scissors'), "Hand two wins!");
       assert.equal(rockPaperScissors('rock', 'scissors'), "Hand one wins!");
     });
-    it('should scrub input to ensure lowercase with "trim"ed whitepace', () => {
+    it('should scrub input to ensure lowercase with "trim"ed whitespace', () => {
       assert.equal(rockPaperScissors('rOcK', ' paper '), "Hand two wins!");
       assert.equal(rockPaperScissors('Paper', 'SCISSORS'), "Hand two wins!");
       assert.equal(rockPaperScissors('rock ', 'sCiSsOrs'), "Hand one wins!");
