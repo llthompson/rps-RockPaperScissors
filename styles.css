@@ -1,0 +1,44 @@
+body {
+    background-color: #e9e3e3;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #646464;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #b50965;
+    border-style: none;
+    border-radius: 5px;
+    background-color: white;
+    padding: 6px;
+    box-shadow: 5px 5px 10px #00000033;
+
+}
+
+section {
+    background-color: white;
+    min-height: 20px;
+    max-width: 75%;
+    margin: 3% auto;
+    text-align: center;
+    padding: 5% auto;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px #00000033;
+
+}
+
+input {
+    margin: 25px 5px;
+    padding: 1px;
+    border: 2px solid #646464;
+    font-size: 18px;
+    font-weight: 700;
+    color: #b50965;
+    border: 1px solid #646464;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px #00000033;
+}
